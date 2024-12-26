@@ -5,7 +5,7 @@ def input_data():
     return text
 
 def frequency_analysis(text):
-    text = re.sub(r'[^a-zA-Z0-9]', '', text)
+    text = ''.join(filter(str.isalnum, text))
     frequency = {}
     total_chars = len(text)
     for char in text:
